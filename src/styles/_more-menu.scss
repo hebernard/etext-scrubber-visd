@@ -1,0 +1,54 @@
+.menu.more-menu{
+  width:330px;
+  height:fit-content;
+  position: absolute;
+  right:20px;
+  top:60px;
+  .user-info{
+   padding:16px;
+   cursor: default;
+    .avatar{
+      font-size: 2rem;
+      font-weight: bold;
+      width: 48px;
+      height: 48px;
+      border-radius:48px;
+      color: #ffffff;
+      background-color: #6a7070;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      float:left;
+      margin-right: 16px;
+    }
+    p{
+      margin:0;
+    }
+  }
+  ul{
+    margin:0;
+    li {
+      padding:16px;
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+      p{
+        margin:0;
+        padding:0;
+      }
+      button, a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:focus{
+          outline:none;
+        }
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}

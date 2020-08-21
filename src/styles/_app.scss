@@ -1,0 +1,153 @@
+html{
+  font-size:10px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.App{
+  width:100%;
+  height:100vh;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+  display: flex;
+}
+
+[hidden]{
+  display:none;
+}
+
+
+//@media (min-width: $xl) {
+//  .App{
+//    display: flex;
+//  }
+//}
+
+
+ul{
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+button{
+  cursor: pointer;
+  background:none;
+  border:none;
+  padding:0;
+  border-radius: 4px;
+  &:focus{
+    outline:none;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #1977D4;
+  }
+}
+
+.link-style{
+  font-size: 14px;
+  color: #047b9c;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.card, .menu{
+  background-color: white;
+  border: solid 1px rgba(151, 151, 151, 0.07);
+  margin: 0px 0px 24px 0px;
+  padding: 16px;
+  box-shadow: 0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 7px 8px -4px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.card{
+  cursor: pointer;
+  &:hover{
+    box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.menu{
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+  z-index: 10;
+}
+
+
+.primary{
+  color: #fff;
+  border: solid 1px rgba(151, 151, 151, 0.07);
+  padding: 4px 0px 5px 0px;
+  min-width: 112px;
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 36px;
+  box-shadow: 0 5px 22px 4px rgba(0, 0, 0, 0.03), 0 7px 8px -4px rgba(0, 0, 0, 0.05);
+  border-radius: 22px;
+  background-color: #002e60;
+  text-align: center;
+}
+
+
+//typography
+p, a, span{
+  font-size: 1.4rem;
+  color: #252525;
+}
+
+.grey{
+  color: #6a7070;
+  font-size: 1.3em;
+}
+
+.caps{
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.large{
+  font-size: 2rem;
+}
+
+.bold{
+  font-weight: 600;
+}
+
+.right{
+  text-align: right;
+}
+
+.center{
+  text-align: center;
+}
+
+
+//tooltips
+.tooltip {
+  visibility: hidden;
+  opacity:0;
+  min-width: 90px;
+  background-color: black;
+  color: white;
+  font-size:14px;
+  font-style:normal;
+  text-align: center;
+  padding: 6px 6px;
+  border-radius: 6px;
+  position: absolute;
+  margin-top: 44px;
+  left: -23px;
+  z-index: 1;
+  transition: opacity 500ms ease;
+}
+
+.tooltip::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}

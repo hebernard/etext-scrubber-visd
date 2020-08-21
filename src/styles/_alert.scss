@@ -1,0 +1,32 @@
+.alert{
+  position: absolute;
+  right:20px;
+  top:70px;
+  height: 60px;
+  width: 300px;
+  padding:0;
+  overflow: hidden;
+  border: none;
+  border-radius: 2px;
+  &:before{
+    content:'';
+    width:6px;
+    height:100%;
+    display: block;
+    background-color: #19A5A4;
+    position: absolute;
+  }
+  p{
+    margin: 20px;
+  }
+  button{
+    position: absolute;
+    top:8px;
+    right:8px;
+    svg{
+        fill:black;
+        width:12px;
+        height:12px;
+      }
+  }
+}

@@ -1,0 +1,73 @@
+.notebook-panel{
+  background-color: #f5f5f5;
+  .toolbar{
+    display: flex;
+    margin:16px 20px;
+    justify-content: space-between;
+    div{
+      display:flex;
+    }
+    button:not(.primary){
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 12px;
+      svg{
+        width: 16px;
+        height: 16px;
+      }
+      span{
+        margin-left: 4px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+  .note-cards{
+    padding: 0 20px;
+    overflow: scroll;
+    .note-card{
+      .group{
+        display: flex;
+        justify-content: space-between;
+      }
+      button{
+        width:36px;
+        svg{
+          height:16px;
+          width:16px;
+          fill:black;
+        }
+      }
+      .highlight-blue{
+        background-color: rgb(134, 214, 230);
+        box-shadow: rgb(134, 214, 230) 0px 6px;
+      }
+      .highlight-yellow{
+        background-color: rgb(255, 203, 78);
+        box-shadow: rgb(255, 203, 78) 0px 6px;
+      }
+      .highlight-green{
+        background-color: rgb(157, 228, 205);
+        box-shadow: rgb(157, 228, 205) 0px 6px;
+      }
+      .highlight-pink{
+        background-color: rgb(255, 173, 190);
+        box-shadow: rgb(255, 173, 190) 0px 6px;
+      }
+      .note, .highlight{
+        max-height:60px;
+        overflow: hidden;
+      }
+      .tags{
+        display: flex;
+      }
+      .tag{
+        border:1px solid #252525;
+        padding:0 8px 2px 8px;
+        margin-right:4px;
+        border-radius:16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.toc-panel{
+  .book-card{
+    padding: 20px;
+    margin-bottom: 40px;
+    height: fit-content;
+    img{
+      width: 77px;
+      height: 96px;
+      margin-right: 16px;
+      margin-top: 6px;
+      float:left;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25), 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    }
+    p{
+      margin:0 0 6px 0;
+    }
+  }
+  .toc{
+    background-color: #f5f5f5;
+    clear:both;
+    height:calc(100vh - 178px);
+    overflow-x: scroll;
+    li{
+      border-bottom: 1px solid lightgrey;
+      display: block;
+      width:100%;
+      button{
+      background: none;
+      border:none;
+      padding: 20px 0 20px 20px;
+      font-size: 14px;
+      width: 100%;
+      text-align: left;
+      &:hover{
+        text-decoration: underline;
+      }
+       &:focus{
+        box-shadow: unset;
+      }
+      }
+    }
+  }
+}

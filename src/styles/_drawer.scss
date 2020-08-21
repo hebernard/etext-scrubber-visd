@@ -1,0 +1,136 @@
+.drawer{
+  background-color: white;
+  border-right:1px solid lightgrey;
+  display: flex;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  width:0;
+  transition: all 300ms ease;
+  .left-nav{
+    min-width: 85px;
+    max-width:85px;
+    height: 100vh;
+    margin:0;
+    padding:0;
+    background-color: #002e60;
+    button{
+      color:white;
+      background:none;
+      border:none;
+      width:100%;
+      height:76px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      cursor: pointer;
+      &:hover, &:focus{
+        outline:none;
+        box-shadow: unset;
+      }
+      &.active{
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid #33557b;
+      }
+      svg{
+        height:18px;
+        width:18px;
+        fill:white;
+        pointer-events: none;
+      }
+      span{
+        font-size:10px;
+        font-weight: 600;
+        margin-top:8px;
+        color:white;
+        pointer-events: none;
+      }
+    }
+  }
+  .drawer-header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    padding: 2px 20px;
+    h1{
+      font-weight: 300;
+      font-size: 24px;
+      color: #252525;
+      margin: 0 10px 0 0;
+      line-height: 26px;
+      display: inline;
+    }
+  }
+  [role="tabpanel"]{
+    height:100vh;
+    width:100%;
+    &:focus{
+      outline:none;
+    }
+  }
+  .drawer-actions{
+    position: absolute;
+    right:20px;
+    top:13px;
+    display: flex;
+    button{
+      background:none;
+      border:none;
+      outline: none;
+      &:first-of-type{
+        margin-right:24px;
+      }
+      svg{
+        fill:black;
+        width:18px;
+        height:18px;
+      }
+      &:focus{
+          box-shadow: unset;
+        }
+    }
+    #expand{
+      background-image:url('../images/expand.svg');
+      background-repeat: no-repeat;
+      width:20px;
+      height:20px;
+      display: none;
+      @media (min-width:$md) {
+        display:unset;
+      }
+    }
+  }
+  &.expanded{
+    width:100%;
+    #expand{
+      background-image:url('../images/collapse.svg');
+    }
+  }
+}
+
+
+
+.drawer-enter, .drawer-exit-active, .drawer-exit-done {
+  left:-400px;
+}
+.drawer-enter-active, .drawer-enter-done, .drawer-exit {
+  left: 0;
+}
+
+.drawer-enter, .drawer-enter-done, .drawer-exit{
+  width:100%;
+  @media (min-width:$md) {
+    width:400px;
+  }
+  @media (min-width:$xl) {
+    width:calc(100% / 3);
+  }
+}
+
+.drawer-exit-active, .drawer-exit-done {
+  width:0px;
+}

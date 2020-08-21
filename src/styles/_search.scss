@@ -1,0 +1,61 @@
+.search-container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+  .search-panel{
+    height:100vh;
+    width:500px;
+    background-color: white;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 3;
+    padding:16px;
+    button{
+      position: absolute;
+      right:20px;
+      top:24px;
+      svg{
+        height:16px;
+        width:16px;
+        fill:#252525;
+      }
+    }
+    .search-label{
+      margin-top:42px;
+      display: block;
+    }
+    form{
+      margin-top: 6px;
+      width: 100%;
+      height: 36px;
+      border: 1px solid #c7c7c7;
+      padding: 0;
+      border-radius: 4px;
+      background-color: white;
+      display: flex;
+      select, input{
+        border: none;
+        background-color: transparent;
+        padding-left:6px;
+      }
+      select{
+        border-right:1px solid lightgrey;
+      }
+      input{
+        flex-grow:1;
+        margin-left:8px;
+      }
+    }
+  }
+  .overlay{
+    width:100%;
+    height:100vh;
+    background-color: black;
+    position: absolute;
+    top:0;
+    opacity:0.4;
+    z-index: 2;
+  }
+}
+

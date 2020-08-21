@@ -1,0 +1,38 @@
+.reader-container{
+  border:none;
+  height:100vh;
+  width:100%;
+  overflow:hidden;
+  position: relative;
+  transition: all 300ms ease;
+  .reader{
+    position: relative;
+    top: -40px;
+    background-color: #c7c7c7;
+    height: calc(100vh - 50px);
+    img{
+      width: auto;
+      height: calc(100vh - 50px);
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}
+
+.drawer.expanded ~ .reader-container{
+  width: 0;
+}
+
+
+.drawer-enter ~ .reader-container, .drawer-exit ~ .reader-container, .drawer-exit-active ~ .reader-container, .drawer-exit-done ~ .reader-container {
+  width:100%;
+}
+.drawer-enter-active ~ .reader-container, .drawer-enter-done ~ .reader-container{
+  width: 0;
+  @media (min-width:$md) {
+    width:calc(100% - 400px);
+  }
+  @media (min-width:$xl) {
+    width:calc((100% / 3)*2);
+  }
+}

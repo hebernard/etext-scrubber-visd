@@ -1,0 +1,66 @@
+header{
+  height:44px;
+  border-bottom: 1px solid #d9d9d9;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  left:0;
+  button{
+    margin: 0 12px;
+    width:44px;
+    height:44px;
+    padding-top: 3px;
+    border-radius:32px;
+    position: relative;
+    &:focus{
+      outline:none;
+      box-shadow: unset;
+    }
+    &:hover .tooltip {
+      visibility: visible;
+      opacity:1;
+    }
+    svg{
+      height:24px;
+      width:24px;
+      fill:black;
+    }
+  }
+  #sched-reading-btn, #display-btn, #playlist-btn, #help-btn{
+    display:none;
+  }
+}
+
+
+.drawer-enter ~ .reader-container, .drawer-enter-done ~ .reader-container{
+  #header-back-btn{
+      display:none;
+    }
+}
+
+
+.drawer-enter ~ .reader-container, .drawer-enter-done ~ .reader-container, .drawer-exit ~ .reader-container,{
+  header{
+    #sched-reading-btn, #display-btn, #playlist-btn, #help-btn {
+      display: none;
+    }
+  }
+  @media (min-width:$lg) {
+    header {
+      #sched-reading-btn, #display-btn, #playlist-btn, #help-btn {
+        display: unset;
+      }
+    }
+  }
+}
+
+@media (min-width:$md) {
+  header {
+    #sched-reading-btn, #display-btn, #playlist-btn, #help-btn {
+      display: unset;
+    }
+  }
+}

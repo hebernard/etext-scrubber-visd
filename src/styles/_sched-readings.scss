@@ -1,0 +1,121 @@
+.sched-readings-container{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+  .sched-readings-panel{
+    height:calc(100vh - 100px);
+    width:800px;
+    background-color: white;
+    z-index: 3;
+    padding:16px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 4px;
+    button.close{
+      position: absolute;
+      right:20px;
+      top:24px;
+      svg{
+        height:16px;
+        width:16px;
+        fill:#252525;
+      }
+    }
+  }
+  .calendar{
+    width:100%;
+    height:calc(100% - 58px);
+    .controls{
+      display:flex;
+      margin-bottom:20px;
+      .current-item{
+        margin:0 auto;
+        width:fit-content;
+        display: flex;
+        align-items: center;
+        p{
+          margin: 0 20px;
+          height: 24px;
+        }
+      }
+      .view{
+        display: flex;
+        align-items: center;
+        span{
+          height: 24px;
+          margin-right:4px;
+          pointer-events: none;
+        }
+        svg{
+          pointer-events: none;
+        }
+      }
+      .view-menu{
+            position: absolute;
+            right: 20px;
+            top: 110px;
+            width: 110px;
+            height: 126px;
+            margin-bottom: 0;
+            padding-top: 0;
+            li{
+              cursor:pointer;
+            }
+            p{
+              margin:16px 0;
+              pointer-events: none;
+            }
+      }
+    }
+    .week-days{
+      display:flex;
+      justify-content: space-between;
+      .week-day.today{
+        font-weight:600;
+      }
+    }
+    .list {
+      height: calc(100% - 58px);
+      &[hidden] {
+        display: none;
+      }
+    }
+    .cells{
+      display: flex;
+      flex-wrap:wrap;
+      height:calc(100% - 16px);
+      div{
+        cursor: pointer;
+        width:calc(100% / 7);
+        //height:100px;
+      }
+      .empty{
+        border:1px solid red;
+      }
+      .date{
+        border:1px solid blue;
+        &.today span{
+          display: block;
+          font-weight:600;
+          text-align: center;
+          border: 1px solid #6A7070;
+          border-radius: 24px;
+          width:24px;
+          height:24px;
+          margin: 4px 0 0 4px;
+        }
+      }
+    }
+  }
+  .overlay{
+    width:100%;
+    height:100vh;
+    background-color: black;
+    position: absolute;
+    top:0;
+    opacity:0.4;
+    z-index: 2;
+  }
+}

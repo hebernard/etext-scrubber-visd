@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>check-white</title>
+    <desc>Created with Sketch.</desc>
+    <g id="check-white" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="correct-18">
+            <rect id="trim" x="0" y="0" width="18" height="18"></rect>
+            <path d="M6.70685978,13.6935287 L4.25155177,11.075829 C3.90123735,10.7023451 3.91898638,10.1146179 4.29119534,9.76310358 C4.6634043,9.41158923 5.24912522,9.42939906 5.59943964,9.80288294 L7.28834503,11.6034909 L12.316234,4.39618953 C12.6093511,3.97601655 13.1864242,3.8738313 13.6051629,4.16795239 C14.0239016,4.46207347 14.125738,5.04112322 13.8326209,5.46129619 L8.1523176,13.6038105 C7.85920052,14.0239834 7.28212742,14.1261687 6.86338874,13.8320476 C6.80497482,13.7910178 6.75272787,13.7444432 6.70685978,13.6935287 L6.70685978,13.6935287 Z" id="icon" fill="#FFFFFF" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

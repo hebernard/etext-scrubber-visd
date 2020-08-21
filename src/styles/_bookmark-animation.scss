@@ -1,0 +1,10 @@
+.bookmark-animated-enter {
+  animation-duration: 1s;
+  animation-name: popIn;
+}
+
+@keyframes popIn {
+  from { transform: scale(0) }
+  75%  { transform: scale(1.5) }
+  to   { transform: scale(1) }
+}

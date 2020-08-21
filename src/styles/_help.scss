@@ -1,0 +1,33 @@
+.menu.help-menu {
+  width: 300px;
+  height: fit-content;
+  position: absolute;
+  right: 80px;
+  top: 60px;
+  ul{
+    margin:0;
+    li {
+      padding:16px;
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+      p{
+        margin:0;
+        padding:0;
+      }
+      button, a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:focus{
+          outline:none;
+        }
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}
